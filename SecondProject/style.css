@@ -5,7 +5,7 @@
     margin: 0;
     box-sizing: border-box;
     text-decoration: none;
-   background-color: #6c757d;
+    background-color: #6c757d;
 }
 
 form {
@@ -13,16 +13,13 @@ form {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    text-align: center;
-    padding: 100px;
+    padding: 1rem;
     gap: 8px;
-    width: 1440px;
-    height: 750px;
 }
 
 label,input {
-    padding: 3px;
     gap: 10px;
+    font-family: inherit;
 }
 
 label {
@@ -35,19 +32,36 @@ input {
     color: #3c096c;
 }
 
-button {
+button,select {
     text-align: center;
     align-items: center;
-    box-shadow: 4px 4px #000;
     border: 3px solid #000;
-    border-radius: 10%;
-    width: 150px;
-    height: 30px; 
+    border-radius: 5%;
+    width: 8rem;
+    height: 2rem; 
     background-color: #3c096c ;
     color: #fff;
 }
 
-#name {
+#name,#surname {
+    width: 8rem;
+}
+
+#userinformation {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    font-size: 1rem;
+    padding: 2rem;
     font-family: inherit;
-    width: 15rem;
+    color: #a4133c;
+}
+
+.read_information {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    gap: 8px;
+    padding: 1rem;
 }
