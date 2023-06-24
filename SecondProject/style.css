@@ -8,6 +8,11 @@
     background-color: #6c757d;
 }
 
+body {
+    display: flex;
+    flex-direction: row;
+}
+
 form {
     font-family: 'Oswald', sans-serif; 
     display: flex;
@@ -57,11 +62,10 @@ button,select {
     color: #a4133c;
 }
 
-.read_information {
+.crud {
     display: flex;
     flex-direction: row;
     align-items: center;
     text-align: center;
     gap: 8px;
-    padding: 1rem;
 }

@@ -5,7 +5,8 @@ document.querySelector('#create').addEventListener('click', (e) => {
     // recebe dados do usuário
     let firstName = document.getElementById('firstname').value;
     let surName = document.getElementById('surname').value;
-    let dateBirth = document.getElementById('date').value;
+    let dateBirth = document.getElementById('date').value; 
+    
     // cria um array de objetos
     let users = new Array();
 
@@ -19,16 +20,40 @@ document.querySelector('#create').addEventListener('click', (e) => {
         users.push({firstName,surName,dateBirth});
         // salvar no localStorage
         localStorage.setItem('users', JSON.stringify(users));
-        document.getElementById('select_users').add(document.createElement('option').text = firstName);      
+        let option = document.getElementById('select_users').appendChild(document.createElement('option'));
+        option.textContent = ""+firstName;
+        option.value = ""+firstName;
 });
- // - Read
+
+ // -  Read
 document.querySelector('#read').addEventListener('click',(e) => {
     e.preventDefault();
 
-    let firstName = document.getElementById('firstname').value;
-    let surName = document.getElementById('surname').value;
-    let dateBirth = document.getElementById('date').value;
+    let select = document.getElementById('select_users');
+    let option = select.options[select.selectedIndex].textContent;
+    let user = JSON.parse(localStorage.getItem('users'));
+    user = user.find(({firstName}) => firstName === option);
+    document.getElementById('user_information').insertAdjacentHTML('beforeend','Nome: '+user.firstName+
+    "<br>Sobrenome: "+user.surName+ '<br>Data de Nascimento: '+user.dateBirth+'<hr>');
+});
 
-    document.getElementById('userinformation').insertAdjacentHTML('beforeend','Nome: '+firstName+
-    '<br>Sobrenome: '+surName+ '<br>Data de Nascimento: '+dateBirth+'<hr>');
+// - Update
+document.querySelector('#update').addEventListener('click', (e) => {
+    e.preventDefault();
+
+    let select = document.getElementById('select_users');
+    let option = select.options[select.selectedIndex].textContent;
+    let user = JSON.parse(localStorage.getItem('users'));
+    user = user.find(({firstName}) => firstName === option);
+});
+
+// - Delete
+document.querySelector('#delete').addEventListener('click', (e) => {
+    e.preventDefault();
+
+    let select = document.getElementById('select_users');
+    let option = select.options[select.selectedIndex].textContent;
+    let user = JSON.parse(localStorage.getItem('users'));
+    user = user.find(({firstName}) => firstName === option);
+    document.getElementById('user_information').removeChild();
 });
