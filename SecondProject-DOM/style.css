@@ -4,13 +4,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    text-decoration: none;
     background-color: #6c757d;
-}
-
-body {
-    display: flex;
-    flex-direction: row;
 }
 
 form {
@@ -37,7 +31,7 @@ input {
     color: #3c096c;
 }
 
-button,select {
+#create {
     text-align: center;
     align-items: center;
     border: 3px solid #000;
@@ -48,7 +42,7 @@ button,select {
     color: #fff;
 }
 
-#name,#surname {
+#name{
     width: 8rem;
 }
 
@@ -62,10 +56,52 @@ button,select {
     color: #a4133c;
 }
 
+#edit,#counter {
+    display: none;
+}
+
 .crud {
     display: flex;
     flex-direction: row;
     align-items: center;
     text-align: center;
     gap: 8px;
+}
+
+table {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+}
+
+tr {
+    display: flex;
+    justify-content: center;
+    gap: 10rem;
+}
+
+button, input {
+    cursor: pointer;
+}
+
+button {
+    text-align: center;
+    align-items: center;
+    border: 3px solid #000;
+    border-radius: 5%;
+    width: 3rem;
+    height: 2rem; 
+    color: #fff;
+}
+#edit_name {
+    margin-left: 1rem;
+}
+#update,#save-edit {
+    background-color: coral;
+   
+}
+
+#delete {
+    background-color: darkred;
 }
