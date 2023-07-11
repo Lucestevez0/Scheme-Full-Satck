@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+       
+        <title>Formulário</title>
+    </head>
+    <body>
+        <form action="javascript:void(0);" method="post">
+            <div>
+                <label for="name">Nome:</label>
+                <input type="text" name="name" id="name" placeholder="nome" maxlength="60" minlength="3" required pattern="([aA-zZ]+)" title="só letras de aA-zZ">
+            </div>
+            <div>
+                <label for="date">Data de Nascimento:</label>
+                <input type="date" name="date" id="date" required max="9999-12-31" > 
+            </div>
+            <div>
+                <button type="submit" id="create" onclick="app.Add()">Salvar</button>
+            </div>  
+            <p id="counter"></p>
+            <div id="edit" role="aria-hidden">
+                <form action="javascript:void(0);" method="post" id="edit_form">
+                    <input type="text"  id="edit-name" placeholder="nome">
+                    <input type="date" id="edit-date">
+                    <button type="submit" value="edit" id="save-edit" >confirm</button><a onclick="CloseInput()" aria-label="Close">&#10006;</a>
+                </form>
+            </div>
+
+        </form>
+            <table id="table">
+                <tr>
+                    <th>Nome</th>
+                    <th>Data de Nascimento</th>
+                    <th>Ações</th>
+                </tr>
+                <tbody id="user_information"></tbody>
+            </table>
+         <script src="main.js"></script>
+    </body>
+</html>

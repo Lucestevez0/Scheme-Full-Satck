@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background-color: #6c757d;
+}
+
+form {
+    font-family: 'Oswald', sans-serif; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1rem;
+    gap: 8px;
+}
+
+label,input {
+    gap: 10px;
+    font-family: inherit;
+}
+
+label {
+    color: #a4133c;
+}
+
+input {
+    box-shadow: 4px 4px #000;
+    border: 3px solid #000;
+    color: #3c096c;
+}
+
+#create {
+    text-align: center;
+    align-items: center;
+    border: 3px solid #000;
+    border-radius: 5%;
+    width: 8rem;
+    height: 2rem; 
+    background-color: #3c096c ;
+    color: #fff;
+}
+
+#name{
+    width: 8rem;
+}
+
+#userinformation {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    font-size: 1rem;
+    padding: 2rem;
+    font-family: inherit;
+    color: #a4133c;
+}
+
+#edit,#counter {
+    display: none;
+}
+
+.crud {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    gap: 8px;
+}
+
+table {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+}
+
+tr {
+    display: flex;
+    justify-content: center;
+    gap: 10rem;
+}
+
+button, input {
+    cursor: pointer;
+}
+
+button {
+    text-align: center;
+    align-items: center;
+    border: 3px solid #000;
+    border-radius: 5%;
+    width: 3rem;
+    height: 2rem; 
+    color: #fff;
+}
+#edit_name {
+    margin-left: 1rem;
+}
+#update,#save-edit {
+    background-color: coral;
+   
+}
+
+#delete {
+    background-color: darkred;
+}
