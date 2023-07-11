@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="style.css" />
+        <title>Movieflix</title>
+    </head>
+
+    <body>
+        <h1>Movieflix</h1>
+
+        <div class="input-container">
+            <div class="input-content">
+                <input type="text" id="search" placeholder="Digite algum filme para pesquisar..." />
+                <img src="img/search.svg" id="search_icon">
+            </div>
+        </div>
+        
+        <div class="show-favorite">
+            <input type="checkbox" class="checkbox" name="checkbox" />
+            <label for="checkbox">Mostrar apenas os meus favoritos</label>
+        </div>
+
+        <div class="movies" id="movies"></div>
+
+        <script src="main.js"></script>
+    </body>
+</html>
