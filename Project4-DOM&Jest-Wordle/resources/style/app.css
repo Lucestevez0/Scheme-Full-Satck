@@ -56,7 +56,6 @@ main {
 }
 
 /* Board */
-
 .board {
     margin: 200px auto 0;
     width: 330px;
@@ -84,7 +83,6 @@ main {
 }
 
 /* Keyboard */
-
 .keyboard {
     margin: 50px auto 0;
 }
